@@ -26,9 +26,8 @@
 
     <script>
         const secretNum = Math.ceil(Math.random() * 10);
-        console.log(secretNum);
         let tries = 0;
-        
+
         function guessNum(num) {
            if (tries >= 5) {
                 alert('You lose. Please reload the page');
@@ -37,7 +36,7 @@
 
            if (secretNum === num) {
                alert(`You win. Number if attempts: ${++tries}`)
-               return;
+               tries = 5;
            } else {
                alert('Miss')
                tries++;
